@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+UserInterfaceState.xcuserstate
+build
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+*~
+*~.nib
+*~.xib 
+.DS_Store 
+xcuserdata/
+=======
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+>>>>>>> 0675f81b7c60b061f66a7d1ded59315f9ff28f79
