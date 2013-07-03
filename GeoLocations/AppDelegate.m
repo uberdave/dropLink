@@ -43,13 +43,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // ****************************************************************************
     // Parse initialization
-     [Parse setApplicationId:@"Ph2mzUPkUDxP3RJKIr1BdfnJwMOjDpuc0hxvcEGu" clientKey:@"AyenOoH4A5fCj4ll6vO0iQ8aflyauVtLwTNVg9Z6"];
+     [Parse setApplicationId:@"Your app key" clientKey:@"your client key"];
     // ****************************************************************************
     
     DBSession* dbSession =
     [[DBSession alloc]
-      initWithAppKey:@"90fhsfsbq7xiumy"
-      appSecret:@"k39gsovzgzulhmm"
+      initWithAppKey:@"your app key"
+      appSecret:@"your ap secret"
       root:kDBRootAppFolder] // either kDBRootAppFolder or kDBRootDropbox
      ;
     [DBSession setSharedSession:dbSession];
