@@ -447,6 +447,8 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
         [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
             
+            
+           
             if(object ){
                 [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
                 CLLocationCoordinate2D coordinate = [location coordinate];
@@ -454,14 +456,22 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
                 PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
                 
                 [object setObject:geoPoint forKey:@"location"];
+                [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
                 
-                
-                [object deleteInBackground];
-                
+                //[object deleteInBackground];
+                if (succeeded) {
                 [self loadObjects];
                 //[self.tableView reloadData];
                 NSLog(@"Successfully deleted object.");
                 userBroadcasting= NO;
+                }else {
+                    // Log details of the failure
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+                }];
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
         }];
     }
