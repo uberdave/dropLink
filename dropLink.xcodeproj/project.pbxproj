@@ -153,7 +153,7 @@
 				554D040D16813E2900723C59 /* SettingsViewController.h */,
 				554D040E16813E2900723C59 /* SettingsViewController.m */,
 				55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */,
-				C451215615C885E3005E733A /* Geolocations */,
+				C451215615C885E3005E733A /* dropLink */,
 				C451214F15C885E3005E733A /* Frameworks */,
 				C451214D15C885E3005E733A /* Products */,
 			);
@@ -194,7 +194,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C451215615C885E3005E733A /* Geolocations */ = {
+		C451215615C885E3005E733A /* dropLink */ = {
 			isa = PBXGroup;
 			children = (
 				5562FE4D1687AC1A004C533D /* bluedot.png */,
@@ -230,6 +230,7 @@
 				C451219115C8968A005E733A /* Assets */,
 				C451215715C885E3005E733A /* Supporting Files */,
 			);
+			name = dropLink;
 			path = Geolocations;
 			sourceTree = "<group>";
 		};
