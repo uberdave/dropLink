@@ -421,6 +421,7 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
             if(userBroadcastStatus == 1 ){
                 [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
                 userBroadcasting =YES;
+        
             }
             else {
                 [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
@@ -428,8 +429,6 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
             }
 
             
-        } else {
-            NSLog (@"The request failed for Query in updatebarbutton");
         }
     }];
       
@@ -441,43 +440,41 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
 	if (!location) {
 		return;
 	}
+    //self.navigationItem.rightBarButtonItem.enabled = NO;
     if (userBroadcasting) {
         //delete user location broadcast
         PFQuery *query = [PFQuery queryWithClassName:@"Location"];
         [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
-        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        PFObject *object  = [query getFirstObject];
+    
+        if(object ){
+                NSError *error = nil;
+            if( [object delete:&error]){
             
-            
-           
-            if(object ){
-                [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
-                CLLocationCoordinate2D coordinate = [location coordinate];
-                
-                PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-                
-                [object setObject:geoPoint forKey:@"location"];
-                [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
-                
-                //[object deleteInBackground];
-                if (succeeded) {
-                [self loadObjects];
-                //[self.tableView reloadData];
-                NSLog(@"Successfully deleted object.");
+                           
+               [self loadObjects];
+               
+                NSLog(@"Successfully deleted location object.");
                 userBroadcasting= NO;
-                }else {
-                    // Log details of the failure
-                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
+            }else{
+                
+                NSLog(@"Error: %@", error);
+                [[[UIAlertView alloc] initWithTitle:@"Network Error"
+                                            message:@"Sorry, A network error has occurred"
+                                           delegate:nil
+                                  cancelButtonTitle:@"ok"
+                                  otherButtonTitles:nil] show];
+            
                 }
-                }];
-            } else {
-                // Log details of the failure
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-        }];
+        return;
+    }
     }
     
     
     if (!userBroadcasting ) {
+        
+        
         //add the user to the broadcast pool
         [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
         // Configure the new event with information from the location and create a new record.
@@ -487,20 +484,24 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
         PFObject *object = [PFObject objectWithClassName:@"Location"];
         [object setObject:geoPoint forKey:@"location"];
         [object setObject:myUserId forKey:@"user"];
-        [object saveEventually:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
+         NSError *error = nil;
+        if([object save:&error]) {
+         
+         
+      
+                 [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
                 // Reload the PFQueryTableViewController
                 [self loadObjects];
                 //[self.tableView reloadData];
-                NSLog(@"Successfully added object.");
+                NSLog(@"Successfully added location object.");
                 userBroadcasting= YES;
             }
             else {
                 // Log details of the failure
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
-        }];
-    }
+        }
+    
 }
 
 
