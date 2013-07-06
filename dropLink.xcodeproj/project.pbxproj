@@ -19,7 +19,6 @@
 		5562FE4E1687AC1B004C533D /* bluedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5562FE4D1687AC1A004C533D /* bluedot.png */; };
 		55A4454B1664707900B746DD /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A4454A1664707900B746DD /* DropboxSDK.framework */; };
 		55BA75C5166324CF009E6AC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */; };
-		55D56BD516711D1800CBFEF5 /* Geolocations-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55D56BD416711D1800CBFEF5 /* Geolocations-Info.plist */; };
 		55D56BD81671261100CBFEF5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BD71671261100CBFEF5 /* Parse.framework */; };
 		55D56BE51671406500CBFEF5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BE316712AA800CBFEF5 /* Social.framework */; };
 		55D56BE61671407F00CBFEF5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BDD16712A2600CBFEF5 /* Accounts.framework */; };
@@ -62,31 +61,31 @@
 		55356B96167E5C9600EF22AE /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
 		55356BB116801EAB00EF22AE /* FileRefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileRefs.h; sourceTree = "<group>"; };
 		55356BB216801EAB00EF22AE /* FileRefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileRefs.m; sourceTree = "<group>"; };
+		554136A61787D884007B6D9A /* dropLink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "dropLink-Info.plist"; sourceTree = "<group>"; };
+		554136A81787DCBF007B6D9A /* dropLink-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "dropLink-Prefix.pch"; path = "../../../../../Users/dave/Desktop/dropLink-Prefix.pch"; sourceTree = "<group>"; };
 		554D040D16813E2900723C59 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		554D040E16813E2900723C59 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		554D041016815C1C00723C59 /* copyRefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = copyRefs.h; path = GeoLocations/copyRefs.h; sourceTree = SOURCE_ROOT; };
-		554D041116815C1C00723C59 /* copyRefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = copyRefs.m; path = GeoLocations/copyRefs.m; sourceTree = SOURCE_ROOT; };
-		5562FE281683CE3B004C533D /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = data.plist; path = GeoLocations/data.plist; sourceTree = SOURCE_ROOT; };
-		5562FE421686863F004C533D /* Uploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Uploader.h; path = GeoLocations/Uploader.h; sourceTree = SOURCE_ROOT; };
-		5562FE431686863F004C533D /* Uploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Uploader.m; path = GeoLocations/Uploader.m; sourceTree = SOURCE_ROOT; };
+		554D041016815C1C00723C59 /* copyRefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = copyRefs.h; path = dropLink/copyRefs.h; sourceTree = SOURCE_ROOT; };
+		554D041116815C1C00723C59 /* copyRefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = copyRefs.m; path = dropLink/copyRefs.m; sourceTree = SOURCE_ROOT; };
+		5562FE281683CE3B004C533D /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = data.plist; path = dropLink/data.plist; sourceTree = SOURCE_ROOT; };
+		5562FE421686863F004C533D /* Uploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Uploader.h; path = dropLink/Uploader.h; sourceTree = SOURCE_ROOT; };
+		5562FE431686863F004C533D /* Uploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Uploader.m; path = dropLink/Uploader.m; sourceTree = SOURCE_ROOT; };
 		5562FE4D1687AC1A004C533D /* bluedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluedot.png; sourceTree = "<group>"; };
 		55A4454A1664707900B746DD /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		55D56BD416711D1800CBFEF5 /* Geolocations-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Geolocations-Info.plist"; sourceTree = "<group>"; };
-		55D56BD616711D5B00CBFEF5 /* Geolocations-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Geolocations-Prefix.pch"; sourceTree = "<group>"; };
 		55D56BD71671261100CBFEF5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		55D56BDD16712A2600CBFEF5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		55D56BDF16712A4D00CBFEF5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		55D56BE116712A7700CBFEF5 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		55D56BE316712AA800CBFEF5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		55F30B0E1682332E0046FF5F /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Downloader.h; path = GeoLocations/Downloader.h; sourceTree = SOURCE_ROOT; };
-		55F30B0F1682332E0046FF5F /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Downloader.m; path = GeoLocations/Downloader.m; sourceTree = SOURCE_ROOT; };
-		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = GeoLocations/SearchViewController.h; sourceTree = SOURCE_ROOT; };
-		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = GeoLocations/SearchViewController.m; sourceTree = SOURCE_ROOT; };
-		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = GeoLocations/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
-		C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleOverlay.m; path = GeoLocations/CircleOverlay.m; sourceTree = SOURCE_ROOT; };
-		C4370E4E15DECC3100ED6B24 /* GeoQueryAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoQueryAnnotation.h; path = GeoLocations/GeoQueryAnnotation.h; sourceTree = SOURCE_ROOT; };
-		C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoQueryAnnotation.m; path = GeoLocations/GeoQueryAnnotation.m; sourceTree = SOURCE_ROOT; };
+		55F30B0E1682332E0046FF5F /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Downloader.h; path = dropLink/Downloader.h; sourceTree = SOURCE_ROOT; };
+		55F30B0F1682332E0046FF5F /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Downloader.m; path = dropLink/Downloader.m; sourceTree = SOURCE_ROOT; };
+		C4370E4715DDCE4C00ED6B24 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = dropLink/SearchViewController.h; sourceTree = SOURCE_ROOT; };
+		C4370E4815DDCE4C00ED6B24 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = dropLink/SearchViewController.m; sourceTree = SOURCE_ROOT; };
+		C4370E4B15DDD17B00ED6B24 /* CircleOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleOverlay.h; path = dropLink/CircleOverlay.h; sourceTree = SOURCE_ROOT; };
+		C4370E4C15DDD17B00ED6B24 /* CircleOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleOverlay.m; path = dropLink/CircleOverlay.m; sourceTree = SOURCE_ROOT; };
+		C4370E4E15DECC3100ED6B24 /* GeoQueryAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoQueryAnnotation.h; path = dropLink/GeoQueryAnnotation.h; sourceTree = SOURCE_ROOT; };
+		C4370E4F15DECC3100ED6B24 /* GeoQueryAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoQueryAnnotation.m; path = dropLink/GeoQueryAnnotation.m; sourceTree = SOURCE_ROOT; };
 		C451214C15C885E3005E733A /* dropLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C451215015C885E3005E733A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C451215215C885E3005E733A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -231,15 +230,15 @@
 				C451215715C885E3005E733A /* Supporting Files */,
 			);
 			name = dropLink;
-			path = Geolocations;
-			sourceTree = "<group>";
+			path = "/Volumes/Cocoa 3.2/My Mods/ParsePlatform-Geolocations-67a7bc5/dropLink";
+			sourceTree = "<absolute>";
 		};
 		C451215715C885E3005E733A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				5562FE281683CE3B004C533D /* data.plist */,
-				55D56BD616711D5B00CBFEF5 /* Geolocations-Prefix.pch */,
-				55D56BD416711D1800CBFEF5 /* Geolocations-Info.plist */,
+				554136A61787D884007B6D9A /* dropLink-Info.plist */,
+				554136A81787DCBF007B6D9A /* dropLink-Prefix.pch */,
 				C451215915C885E3005E733A /* InfoPlist.strings */,
 				C451215C15C885E3005E733A /* main.m */,
 			);
@@ -311,7 +310,6 @@
 				C4A09FC215ED4BA000E98CC0 /* Icon.png in Resources */,
 				C4A09FC315ED4BA000E98CC0 /* Icon@2x.png in Resources */,
 				55BA75C5166324CF009E6AC2 /* Default-568h@2x.png in Resources */,
-				55D56BD516711D1800CBFEF5 /* Geolocations-Info.plist in Resources */,
 				55356B8D167DA9AD00EF22AE /* bulb_off_24.png in Resources */,
 				55356B90167DAA4100EF22AE /* bulb_on_24.png in Resources */,
 				5562FE291683CE3B004C533D /* data.plist in Resources */,
@@ -429,8 +427,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GeoLocations/dropLink-Prefix.pch";
-				INFOPLIST_FILE = "GeoLocations/GeoLocations-Info.plist";
+				GCC_PREFIX_HEADER = "dropLink/dropLink-Prefix.pch";
+				INFOPLIST_FILE = "dropLink/dropLink-Info.plist";
 				New_Setting = "";
 				New_Setting1 = "";
 				PRODUCT_NAME = dropLink;
@@ -447,8 +445,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GeoLocations/dropLink-Prefix.pch";
-				INFOPLIST_FILE = "GeoLocations/GeoLocations-Info.plist";
+				GCC_PREFIX_HEADER = "dropLink/dropLink-Prefix.pch";
+				INFOPLIST_FILE = "dropLink/dropLink-Info.plist";
 				New_Setting = "";
 				New_Setting1 = "";
 				PRODUCT_NAME = dropLink;
