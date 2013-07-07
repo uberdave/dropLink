@@ -14,7 +14,7 @@ Will locate by users on the same database by proximity.
 Will transfer files between users dropbox accounts on the fly, in the cloud- no waiting for transfers.  
 dropLink uses Parse.com and Dropbox to share files  
 
-Check Out the Wiki for Parse.com Database schema.
+Check Out the [Wiki](https://github.com/uberdave/dropLink/wiki) for Parse.com Database schema.
 
 
 
