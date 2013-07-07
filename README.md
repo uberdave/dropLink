@@ -9,18 +9,20 @@ For, example, two users with the app could find each other within a radius of up
 For an overview, see "dropLink Overview" in the repo.
 Current Status : beta
 
-Will compile using ios deployment target 5.1 using IOS 6.1.
-Will locate by users on the same database by proximity.
-Will transfer files between users dropbox accounts on the fly, in the cloud- no waiting for transfers.
-dropLink uses Parse.com and Dropbox to share files
+Will compile using ios deployment target 5.1 using IOS 6.1.  
+Will locate by users on the same database by proximity.  
+Will transfer files between users dropbox accounts on the fly, in the cloud- no waiting for transfers.  
+dropLink uses Parse.com and Dropbox to share files  
+
+Check Out the Wiki for Parse.com Database schema.
 
 
 
-needs:
+needs:  
  
-seperate components for modularity
-update to use a RAILS server
-internet connectivity checks
+ 
+update to use a RAILS server  
+internet connectivity checks  
 clean up UI
 
 
