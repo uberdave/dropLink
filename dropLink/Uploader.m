@@ -13,7 +13,7 @@
 
 -(void)deleteUserDownloads{
     
-    //deletes all users as parse requires 1 api call per delete or add
+    //deletes all download rows from Download Table as parse requires 1 api call per delete or add
     PFQuery *query = [PFQuery queryWithClassName:@"Downloads"];
     
     [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
