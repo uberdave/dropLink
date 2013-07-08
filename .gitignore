@@ -9,6 +9,7 @@ build
 *~.xib 
 .DS_Store 
 xcuserdata/
+dropLink/AppDelegate.m
 =======
 # Xcode
 .DS_Store
@@ -28,5 +29,5 @@ profile
 *.moved-aside
 DerivedData
 .idea/
-dropLink/AppDelegate.m
+
 >>>>>>> 0675f81b7c60b061f66a7d1ded59315f9ff28f79
