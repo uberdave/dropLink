@@ -19,6 +19,7 @@
 		55A4454B1664707900B746DD /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A4454A1664707900B746DD /* DropboxSDK.framework */; };
 		55BA75C5166324CF009E6AC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */; };
 		55BF5FE4178A85F30065A721 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BF5FE3178A85F30065A721 /* AppDelegate.m */; };
+		55BF5FE6178A903D0065A721 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BF5FE5178A903C0065A721 /* AppDelegate.m */; };
 		55D56BD81671261100CBFEF5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BD71671261100CBFEF5 /* Parse.framework */; };
 		55D56BE51671406500CBFEF5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BE316712AA800CBFEF5 /* Social.framework */; };
 		55D56BE61671407F00CBFEF5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BDD16712A2600CBFEF5 /* Accounts.framework */; };
@@ -72,6 +73,7 @@
 		55A4454A1664707900B746DD /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		55BF5FE3178A85F30065A721 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55BF5FE5178A903C0065A721 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		55D56BD71671261100CBFEF5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		55D56BDD16712A2600CBFEF5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		55D56BDF16712A4D00CBFEF5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -200,6 +202,7 @@
 				C451215F15C885E3005E733A /* AppDelegate.h */,
 				55BF5FE3178A85F30065A721 /* AppDelegate.m */,
 				C451216215C885E3005E733A /* MainStoryboard.storyboard */,
+				55BF5FE5178A903C0065A721 /* AppDelegate.m */,
 				551D3E4016685C3900D56E52 /* DownloadsViewController.h */,
 				551D3E4116685C3900D56E52 /* DownloadsViewController.m */,
 				C451219215C89727005E733A /* MasterViewController.h */,
@@ -335,6 +338,7 @@
 				55F30B101682332E0046FF5F /* Downloader.m in Sources */,
 				5562FE4416868640004C533D /* Uploader.m in Sources */,
 				55BF5FE4178A85F30065A721 /* AppDelegate.m in Sources */,
+				55BF5FE6178A903D0065A721 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
