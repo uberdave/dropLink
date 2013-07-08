@@ -26,7 +26,7 @@
             downloader = [[Downloader alloc] init];
             [downloader setDelegate:self];
             [downloader startDownload];
-                    }
+        }
         return YES;
     }
     // Add whatever other url handling code your app requires here
@@ -53,21 +53,21 @@
       root:kDBRootAppFolder] // either kDBRootAppFolder or kDBRootDropbox
      ;
     [DBSession setSharedSession:dbSession];
-   
     
-        //Start Dropbox downloads
-     
+    
+    //Start Dropbox downloads
+    
     
     if ([[DBSession sharedSession] isLinked]) {
         
         
+        
+        
+        downloader = [[Downloader alloc] init];
+        [downloader setDelegate:self];
+        [downloader startDownload];
+    }
     
-    
-     downloader = [[Downloader alloc] init];
-    [downloader setDelegate:self];
-    [downloader startDownload];
-   }
-   
     
     
     // Override point for customization after application launch.
@@ -83,21 +83,21 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     
     //Remove user data
-   /* PFQuery *query = [PFQuery queryWithClassName:@"Location"];
-    [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        
-        if (object) {
-             NSLog(@" removing object");
-            //Remove object- sharing is only enabled while the appis active
-            [object deleteInBackground];
-        }
-        if (!object){
-            NSLog(@"failed to remove object");
-        }
-    }];
-
-    */
+    /* PFQuery *query = [PFQuery queryWithClassName:@"Location"];
+     [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
+     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+     
+     if (object) {
+     NSLog(@" removing object");
+     //Remove object- sharing is only enabled while the appis active
+     [object deleteInBackground];
+     }
+     if (!object){
+     NSLog(@"failed to remove object");
+     }
+     }];
+     
+     */
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     MasterViewController *masterViewController = [storyboard instantiateViewControllerWithIdentifier:@"MasterViewController"];
@@ -105,22 +105,22 @@
     // Stop updating locations while in the background.
     [masterViewController.locationManager stopUpdatingLocation];
     
-  
+    
     
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-   if ([PFUser currentUser]) {
-   
-    // Start updating locations when the app returns to the foreground.
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    MasterViewController *masterViewController = [storyboard instantiateViewControllerWithIdentifier:@"MasterViewController"];
-    [masterViewController.locationManager startUpdatingLocation];
-    NSLog(@"location updated");
-    //*******************************************************************************
- 
-}
+    if ([PFUser currentUser]) {
+        
+        // Start updating locations when the app returns to the foreground.
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        MasterViewController *masterViewController = [storyboard instantiateViewControllerWithIdentifier:@"MasterViewController"];
+        [masterViewController.locationManager startUpdatingLocation];
+        NSLog(@"location updated");
+        //*******************************************************************************
+        
+    }
 }
 // Called when user has allowed this application via Dropbox website or Dropbox app
 
