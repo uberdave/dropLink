@@ -69,7 +69,7 @@ NSString *copyRef;
     if (!cursor) {
         cursor=@"";
     }
-  NSLog(@"cursor sent = %@",cursor);
+  NSLog(@"cursor from data.plist = %@",cursor);
 [[self restClient] loadDelta:cursor];
     
     
@@ -104,7 +104,7 @@ NSString *copyRef;
          NSLog(@"cursors are equal");
          [self processComplete];
     }
-     NSLog(@"data written = %@",[data objectForKey:@"cursor"]);
+     NSLog(@"cursor written = %@",[data objectForKey:@"cursor"]);
  
     NSLog(@"cursor recieved = %@",cursor);
    }

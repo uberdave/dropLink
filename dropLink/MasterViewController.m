@@ -418,7 +418,7 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
     [query countObjectsInBackgroundWithBlock:^(int count, NSError *error) {
         if (!error) {
             int userBroadcastStatus = count;
-            if(userBroadcastStatus == 1 ){
+            if(userBroadcastStatus >= 1 ){
                 [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
                 userBroadcasting =YES;
         
