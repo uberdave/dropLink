@@ -21,3 +21,4 @@ Downloader *downloader;
 @property (strong, nonatomic) UIViewController *viewController;
 
 @end
+

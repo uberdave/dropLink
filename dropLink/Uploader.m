@@ -17,9 +17,10 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Downloads"];
     
     [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
-    
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    NSError *error = nil;
+    NSArray * objects;
+    objects =[query findObjects:&error];
+    {
         
         if (!error) {
             int count;
@@ -46,7 +47,7 @@
             
         }
     
-     }];
+    }
     
 }
 
