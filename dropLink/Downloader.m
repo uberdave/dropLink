@@ -67,10 +67,10 @@ NSString *copyRef;
     cursor = [savedCursor objectForKey:@"cursor"] ;
     
     if (!cursor) {
-        cursor=@"";
+        cursor=@"no cursor";
     }
   NSLog(@"cursor from data.plist = %@",cursor);
-[[self restClient] loadDelta:cursor];
+[[self restClient] loadDelta:nil];
     
     
 }
@@ -109,12 +109,12 @@ NSString *copyRef;
     NSLog(@"cursor recieved = %@",cursor);
    }
 
-- (void)restClient:(DBRestClient*)client loadDeltaFailedWithError:(NSError *)error{
+/*- (void)restClient:(DBRestClient*)client loadDeltaFailedWithError:(NSError *)error{
     NSLog(@"DELTA ERROR");
         
-    }
+   }
   
-
+*/
     
 
 

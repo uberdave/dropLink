@@ -17,6 +17,7 @@
 		554D041216815C1C00723C59 /* copyRefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D041116815C1C00723C59 /* copyRefs.m */; };
 		5562FE4416868640004C533D /* Uploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5562FE431686863F004C533D /* Uploader.m */; };
 		5562FE4E1687AC1B004C533D /* bluedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5562FE4D1687AC1A004C533D /* bluedot.png */; };
+		5584DACB178C0B6A00E0476D /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5584DACA178C0B6A00E0476D /* data.plist */; };
 		55A4454B1664707900B746DD /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A4454A1664707900B746DD /* DropboxSDK.framework */; };
 		55BA75C5166324CF009E6AC2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */; };
 		55D56BD81671261100CBFEF5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D56BD71671261100CBFEF5 /* Parse.framework */; };
@@ -71,6 +72,7 @@
 		5562FE421686863F004C533D /* Uploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Uploader.h; path = dropLink/Uploader.h; sourceTree = SOURCE_ROOT; };
 		5562FE431686863F004C533D /* Uploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Uploader.m; path = dropLink/Uploader.m; sourceTree = SOURCE_ROOT; };
 		5562FE4D1687AC1A004C533D /* bluedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluedot.png; sourceTree = "<group>"; };
+		5584DACA178C0B6A00E0476D /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		55A4454A1664707900B746DD /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		55BA75C4166324CF009E6AC2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		55D56BD71671261100CBFEF5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				554136A61787D884007B6D9A /* dropLink-Info.plist */,
+				5584DACA178C0B6A00E0476D /* data.plist */,
 				554136A81787DCBF007B6D9A /* dropLink-Prefix.pch */,
 				C451215915C885E3005E733A /* InfoPlist.strings */,
 				C451215C15C885E3005E733A /* main.m */,
@@ -310,6 +313,7 @@
 				55356B8D167DA9AD00EF22AE /* bulb_off_24.png in Resources */,
 				55356B90167DAA4100EF22AE /* bulb_on_24.png in Resources */,
 				5562FE4E1687AC1B004C533D /* bluedot.png in Resources */,
+				5584DACB178C0B6A00E0476D /* data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
