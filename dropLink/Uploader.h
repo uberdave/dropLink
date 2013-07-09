@@ -14,4 +14,5 @@
 @interface Uploader : NSObject
 -(void)uploadToParse:(NSMutableArray*)objects;
 
+
 @end
