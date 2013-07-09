@@ -465,8 +465,10 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
                         
                         
                     }
+                    [self loadObjects];
                     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
                     userBroadcasting= NO;
+                    
                 }
             }else {
               
