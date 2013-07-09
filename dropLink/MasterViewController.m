@@ -465,9 +465,7 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
                         
                         
                     }
-                    [self loadObjects];
-                    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
-                    userBroadcasting= NO;
+                    
                     
                 }
             }else {
@@ -516,6 +514,9 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
 -(void)callbackWithResult:(NSNumber *)result error:(NSError *)error{
     if(result){
         NSLog(@"Location Object deleted");
+        [self loadObjects];
+        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
+        userBroadcasting= NO;
     }
     else{
         NSLog(@"%@",error);
