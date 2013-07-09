@@ -10,65 +10,43 @@
 #import <UIKit/UIKit.h>
 
 @implementation Uploader
- int count;
 
--(void)countUserDownloadObjects{
-    PFQuery *query = [PFQuery queryWithClassName:@"Downloads"];
-    [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
-
-    NSError *error = nil;
-    NSArray * objects;
-    objects =[query findObjects:&error];
-    {
-        if (!error) {
-           
-            // int i;
-            
-            count =[objects count];
-           
-            
-        }else{
-            count = -1;
-        
-    }
-}
-}
 -(void)deleteDownloadObject{
     
-    NSMutableArray *allObjects = [NSMutableArray array];
-    //NSUInteger limit = 0;
-    //NSUInteger skip = 0;
+    NSMutableArray *allUserObjects = [NSMutableArray array];
     PFQuery *query = [PFQuery queryWithClassName:@"Downloads"];
     [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
-    //[query setLimit: limit];
-    //[query setSkip: skip];
+    //get all of the user's records in the Downloads table
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // The find succeeded. Add the returned objects to allObjects
-            [allObjects addObjectsFromArray:objects];
-            //if (objects.count == limit) {
-                // There might be more objects in the table. Update the skip value and execute the query again.
-               // skip += limit;
-                //[query setSkip: skip];
-                //[query findObjects... // Execute the query until all objects have been returned. Keep adding the results to the allObjects mutable array.
+            // received the present objects in the table
+            [allUserObjects addObjectsFromArray:objects];
+             if (allUserObjects.count > 0) {
+                 for (int i =0; i< allUserObjects.count  ; i++) {
+                     
+                 
+                 PFObject *myObject = [allUserObjects objectAtIndex:i];
+                 NSString  *myObjectId = [myObject objectId];
+                
+                 NSLog(@" object id is %@",myObjectId);
+            [myObject deleteInBackgroundWithTarget:self selector:@selector(callbackWithResult:error:)];
+                     
+                 
+                 }
+                 }
                  }else {
                      // Log details of the failure
                      NSLog(@"Error: %@ %@", error, [error userInfo]);
                  }
                  }];
+    
+    
             }
     
 
 -(void)callbackWithResult:(NSNumber *)result error:(NSError *)error{
     if(result){
-        count=count-1;
-        if (count > 0) {
-            [self deleteDownloadObject];
-        }else{
-            NSLog(@"All objects deleted");
-        }
-       
-    NSLog(@"Result of delete xxxxxxxxcv  s jneibefbibfub3fubu3hrb= %@",result);
+        NSLog(@"Download Object deleted");
     }
     else{
         NSLog(@"%@",error);
@@ -80,11 +58,10 @@
 
 -(void)uploadToParse:(NSMutableArray*)objects{
     
-    //clear the table on serverfor the new object
-   [self countUserDownloadObjects ];
-    if (count >0) {
+    //clear the table on serverfor the new objects
+   
         [self deleteDownloadObject];
-    }
+    
     
     
     
