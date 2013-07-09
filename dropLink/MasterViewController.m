@@ -438,6 +438,7 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
     // If it's not possible to get a location, then return.
 	CLLocation *location = _locationManager.location;
 	if (!location) {
+        NSLog(@"No Location!");
 		return;
 	}
     //self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -465,6 +466,7 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
                         
                     }
                     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
+                    userBroadcasting= NO;
                 }
             }else {
               
@@ -481,8 +483,8 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
     if (!userBroadcasting ) {
         
         
-        //add the user to the broadcast pool
-        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
+        
+       
         // Configure the new event with information from the location and create a new record.
         CLLocationCoordinate2D coordinate = [location coordinate];
         NSString *myUserId = [[PFUser currentUser]username];
@@ -492,15 +494,14 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
         [object setObject:myUserId forKey:@"user"];
          NSError *error = nil;
         if([object save:&error]) {
-         
-         
-      
-                 [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
+                 
                 // Reload the PFQueryTableViewController
                 [self loadObjects];
                 //[self.tableView reloadData];
                 NSLog(@"Successfully added location object.");
+              //add the user to the broadcast pool
                 userBroadcasting= YES;
+               [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
             }
             else {
                 // Log details of the failure
