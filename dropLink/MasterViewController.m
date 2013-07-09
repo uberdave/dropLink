@@ -443,32 +443,38 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
     //self.navigationItem.rightBarButtonItem.enabled = NO;
     if (userBroadcasting) {
         //delete user location broadcast
+        //using an array to make sure that no more than one record can be in the user location table
+        NSMutableArray *allUserObjects = [NSMutableArray array];
         PFQuery *query = [PFQuery queryWithClassName:@"Location"];
         [query whereKey:@"user" equalTo:[[PFUser currentUser]username]];
-        PFObject *object  = [query getFirstObject];
-    
-        if(object ){
-                NSError *error = nil;
-            if( [object delete:&error]){
-            
-                           
-               [self loadObjects];
-               
-                NSLog(@"Successfully deleted location object.");
-                userBroadcasting= NO;
-                [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
-            }else{
-                
-                NSLog(@"Error: %@", error);
+        
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // received the present objects in the table
+                [allUserObjects addObjectsFromArray:objects];
+                if (allUserObjects.count > 0) {
+                    for (int i =0; i< allUserObjects.count  ; i++) {
+                        
+                        
+                        PFObject *myObject = [allUserObjects objectAtIndex:i];
+                        NSString  *myObjectId = [myObject objectId];
+                        
+                        NSLog(@" object id is %@",myObjectId);
+                        [myObject deleteInBackgroundWithTarget:self selector:@selector(callbackWithResult:error:)];
+                        
+                        
+                    }
+                    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blueColor]];
+                }
+            }else {
+              
                 [[[UIAlertView alloc] initWithTitle:@"Network Error"
                                             message:@"Sorry, A network error has occurred"
                                            delegate:nil
                                   cancelButtonTitle:@"ok"
                                   otherButtonTitles:nil] show];
-            
-                }
-        return;
-    }
+            }
+            }];
     }
     
     
@@ -504,7 +510,16 @@ NSLog(@"view did load----------------------------------------------------->>>>>>
     
 }
 
-
+-(void)callbackWithResult:(NSNumber *)result error:(NSError *)error{
+    if(result){
+        NSLog(@"Location Object deleted");
+    }
+    else{
+        NSLog(@"%@",error);
+        return;
+    }
+    
+}
 - (IBAction)insertCurrentLocation:(id)sender {
   
 	[self updateGeopoints];
