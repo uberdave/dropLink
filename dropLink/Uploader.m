@@ -11,7 +11,7 @@
 
 @implementation Uploader
 
--(void)deleteDownloadObject{
+-(void)deleteDownloadObjects{
     
     NSMutableArray *allUserObjects = [NSMutableArray array];
     PFQuery *query = [PFQuery queryWithClassName:@"Downloads"];
@@ -60,7 +60,7 @@
     
     //clear the table on serverfor the new objects
    
-        [self deleteDownloadObject];
+        [self deleteDownloadObjects];
     
     
     
